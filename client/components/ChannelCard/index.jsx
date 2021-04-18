@@ -2,19 +2,16 @@ import { Card } from "react-bootstrap";
 import classes from "./Style.module.scss";
 
 const ChannelCard = ({ name, status, datetime, provider, onClick }) => {
-  const cls = [
-    classes.cardInner,
-    status === "ok" ? classes.success : classes.fail,
-  ];
+  const cls = [classes.cardInner, status ? classes.success : classes.fail];
   return (
     <Card className={classes.CardWrap} onClick={onClick}>
       <Card.Body className={cls.join(" ")}>
         <p>{name}</p>
         <p>Status: {status}</p>
         <p>{provider}</p>
-        <p>
+        {/* <p>
           <small>{datetime}</small>
-        </p>
+        </p> */}
       </Card.Body>
     </Card>
   );

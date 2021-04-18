@@ -27,7 +27,13 @@ export const channelsReducer = (state = initialState, action) => {
     case DELETE_CHANNEL_SUCCESS:
       return { ...state, loading: false };
     case FETCH_CHANNELS_SUCCESS:
-      return { ...state, threads: action.payload, error: null, loading: false };
+      return {
+        ...state,
+        channels: action.payload,
+        channel: {},
+        error: null,
+        loading: false,
+      };
 
     default:
       return state;

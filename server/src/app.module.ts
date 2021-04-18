@@ -8,6 +8,7 @@ import { SequelizeModule } from '@nestjs/sequelize';
 import { ConfigModule } from '@nestjs/config';
 import { Dialect } from 'sequelize/types';
 import { AppGateway } from './app.gateway';
+import { SchModule } from './channelSchedule/schedule.module';
 
 @Module({
   imports: [
@@ -27,6 +28,7 @@ import { AppGateway } from './app.gateway';
     }),
     ChannelsModule,
     ProvidersModule,
+    SchModule,
   ],
   providers: [AppGateway],
 })
