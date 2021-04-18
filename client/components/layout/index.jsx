@@ -1,9 +1,9 @@
 import Head from "next/head";
-
-/* Components */
+import { useRouter } from "next/router";
 import Header from "../header";
 
 export default function Layout({ children, title = "Channel Monitor" }) {
+  const router = useRouter();
   return (
     <div>
       <Head>
@@ -22,6 +22,14 @@ export default function Layout({ children, title = "Channel Monitor" }) {
         />
       </Head>
       <Header />
+      {router.pathname !== "/" && (
+        <div className="arrow-back-wrapper">
+          <span className="arrow-back" onClick={() => router.back()}>
+            &larr;
+          </span>
+          <small>Go back</small>
+        </div>
+      )}
       {children}
       <style jsx global>{`
         html,
@@ -352,6 +360,30 @@ export default function Layout({ children, title = "Channel Monitor" }) {
 
         .text-center {
           text-align: center;
+        }
+
+        .arrow-back-wrapper {
+          position: relative;
+          margin-left: 20px;
+        }
+        .arrow-back-wrapper > small {
+          display: none;
+          position: absolute;
+          top: 50px;
+          left: -4px;
+        }
+        .arrow-back {
+          position: absolute;
+          font-size: 40px;
+          cursor: pointer;
+        }
+
+        .arrow-back:hover {
+          font-size: 45px;
+        }
+
+        .arrow-back:hover + small {
+          display: block;
         }
 
         // Extra small devices (portrait phones, less than 576px)

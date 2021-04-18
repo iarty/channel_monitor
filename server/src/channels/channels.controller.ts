@@ -29,12 +29,12 @@ export class ChannelsController {
     return this.channelService.addChannel(dto);
   }
 
-  @Delete()
-  deleteChannel(@Body() id: number) {
+  @Delete('/channels')
+  deleteChannel(@Param('id') id: string) {
     return this.channelService.deleteChannel(id);
   }
 
-  @Put()
+  @Put('/channels')
   editChannel(@Body() dto: EditChannelDto) {
     return this.channelService.editChannel(dto);
   }

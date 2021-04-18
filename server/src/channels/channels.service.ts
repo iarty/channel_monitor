@@ -43,7 +43,7 @@ export class ChannelsService {
     }
   }
 
-  async deleteChannel(id: number): Promise<string> {
+  async deleteChannel(id: string): Promise<string> {
     try {
       const channel = await this.channelModel.findOne({
         where: {

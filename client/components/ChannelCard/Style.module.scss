@@ -3,7 +3,11 @@
   margin: 10px;
   min-width: 200px;
   border: none;
+  cursor: pointer;
   background-color: rgb(225, 224, 224);
+  &:hover {
+    transform: scale(1.05);
+  }
   p {
     padding: 0;
     margin: 0;
