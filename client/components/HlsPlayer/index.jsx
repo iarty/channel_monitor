@@ -1,14 +1,11 @@
-import { useRouter } from "next/router";
 import ReactHlsPlayer from "react-hls-player";
 
-const HlsPlayer = () => {
-  const router = useRouter();
-
+const HlsPlayer = ({ url }) => {
   return (
     <ReactHlsPlayer
       src={
-        router.query?.url
-          ? `http://192.168.15.5:6688${router.query.url}`
+        url
+          ? url
           : "https://bitdash-a.akamaihd.net/content/sintel/hls/playlist.m3u8"
       }
       autoPlay={false}

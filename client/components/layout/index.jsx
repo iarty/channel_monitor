@@ -274,8 +274,8 @@ export default function Layout({ children, title = "Channel Monitor" }) {
           padding: 0 0.5rem;
           display: flex;
           flex-direction: column;
-          justify-content: center;
           align-items: center;
+          max-width: 1500px;
         }
 
         .headline {

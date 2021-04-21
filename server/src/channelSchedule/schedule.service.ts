@@ -3,7 +3,7 @@ import { Cron } from '@nestjs/schedule';
 import { InjectModel } from '@nestjs/sequelize';
 import { Channel } from 'db/models/channels.model';
 import { format, differenceInMinutes } from 'date-fns';
-
+import { InjectBot } from 'nestjs-telegraf';
 @Injectable()
 export class TasksService {
   private readonly logger = new Logger(TasksService.name);
@@ -12,10 +12,12 @@ export class TasksService {
     @InjectModel(Channel)
     private channelModel: typeof Channel,
     private httpService: HttpService,
+    @InjectBot() private telegramBot,
   ) {}
 
   @Cron('20 * * * * *')
   async handleCron() {
+    const chatId = this.telegramBot.context?.chatId;
     const channels = await this.channelModel.findAll({ raw: true });
     const promises = [];
     channels.forEach((el) => {
@@ -34,6 +36,7 @@ export class TasksService {
             id: channels[i].id,
             name: channels[i].name,
             link: el.value.config.url,
+            monitoring: channels[i].monitoring,
             status:
               differenceInMinutes(
                 new Date(el.value.headers['last-modified']),
@@ -52,11 +55,10 @@ export class TasksService {
             name: channels[i].name,
             url: el.reason.config.url,
             status: false,
+            monitoring: channels[i].monitoring,
             providerId: channels[i].providerId,
           },
     );
-    console.log(data);
-
     data.forEach(async (el) => {
       try {
         await this.channelModel.update(
@@ -70,5 +72,19 @@ export class TasksService {
         this.logger.debug(error);
       }
     });
+
+    const failedChannel = data.filter((el) => !el.status && el.monitoring);
+
+    if (failedChannel.length && chatId) {
+      this.telegramBot.telegram.sendMessage(
+        chatId,
+        `<strong>Не работают каналы:</strong>
+        ${failedChannel.map((el) => `❌ ${el.name}`).join('\n')}
+        `,
+        {
+          parse_mode: 'Html',
+        },
+      );
+    }
   }
 }

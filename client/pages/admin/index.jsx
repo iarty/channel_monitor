@@ -3,7 +3,7 @@ import { useRouter } from "next/router";
 const Admin = () => {
   const router = useRouter();
   return (
-    <div className="grid">
+    <div className="grid" style={{ margin: "auto" }}>
       <a className="card-link" onClick={() => router.push("/admin/channels")}>
         <h3>Каналы &rarr;</h3>
         <p>Здесь можно администрировать каналы</p>

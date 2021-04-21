@@ -7,7 +7,7 @@ const ChannelCard = ({ name, status, datetime, provider, onClick }) => {
     <Card className={classes.CardWrap} onClick={onClick}>
       <Card.Body className={cls.join(" ")}>
         <p>{name}</p>
-        <p>Status: {status}</p>
+        <p>Status: {status ? "ok" : "fail"}</p>
         <p>{provider}</p>
         {/* <p>
           <small>{datetime}</small>

@@ -9,6 +9,7 @@ import { ConfigModule } from '@nestjs/config';
 import { Dialect } from 'sequelize/types';
 import { AppGateway } from './app.gateway';
 import { SchModule } from './channelSchedule/schedule.module';
+import { TelegramModule } from './telegram/telegram.module';
 
 @Module({
   imports: [
@@ -25,9 +26,11 @@ import { SchModule } from './channelSchedule/schedule.module';
       },
       autoLoadModels: true,
       synchronize: true,
+      logging: false,
     }),
     ChannelsModule,
     ProvidersModule,
+    TelegramModule,
     SchModule,
   ],
   providers: [AppGateway],

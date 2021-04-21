@@ -1,7 +1,7 @@
 import {
   FETCH_PROVIDERS_SUCCESS,
-  SET_ERROR,
-  SET_LOADING,
+  SET_PROVIDER_ERROR,
+  SET_PROVIDER_LOADING,
   POST_PROVIDER_SUCCESS,
   PUT_PROVIDER_SUCCESS,
   DELETE_PROVIDER_SUCCESS,
@@ -16,9 +16,9 @@ const initialState = {
 
 export const providersReducer = (state = initialState, action) => {
   switch (action.type) {
-    case SET_LOADING:
+    case SET_PROVIDER_LOADING:
       return { ...state, loading: true };
-    case SET_ERROR:
+    case SET_PROVIDER_ERROR:
       return { ...state, loading: false, error: action.payload.error };
     case POST_PROVIDER_SUCCESS:
       return { ...state, loading: false };
@@ -27,7 +27,12 @@ export const providersReducer = (state = initialState, action) => {
     case DELETE_PROVIDER_SUCCESS:
       return { ...state, loading: false };
     case FETCH_PROVIDERS_SUCCESS:
-      return { ...state, threads: action.payload, error: null, loading: false };
+      return {
+        ...state,
+        providers: action.payload,
+        error: null,
+        loading: false,
+      };
 
     default:
       return state;

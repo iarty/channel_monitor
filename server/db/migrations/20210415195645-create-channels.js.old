@@ -17,6 +17,9 @@ module.exports = {
       status: {
         type: Sequelize.BOOLEAN,
       },
+      monitoring: {
+        type: Sequelize.BOOLEAN,
+      },
       providerId: {
         type: Sequelize.INTEGER,
       },

@@ -41,7 +41,7 @@ export class ProvidersService {
     }
   }
 
-  async deleteProvider(id: number): Promise<string> {
+  async deleteProvider(id: string): Promise<string> {
     try {
       const provider = await this.providerModel.findOne({
         where: {

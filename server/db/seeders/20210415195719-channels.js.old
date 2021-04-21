@@ -11,6 +11,7 @@ module.exports = {
         updatedAt: null,
         deletedAt: null,
         providerId: 1,
+        monitoring: true,
       },
       {
         name: 'Баластан (ОТРК)',
@@ -20,6 +21,7 @@ module.exports = {
         updatedAt: null,
         deletedAt: null,
         providerId: 1,
+        monitoring: true,
       },
       {
         name: 'Маданият Тарых Тил',
@@ -29,6 +31,7 @@ module.exports = {
         updatedAt: null,
         deletedAt: null,
         providerId: 1,
+        monitoring: true,
       },
       {
         name: 'Музыка (КТР)',
@@ -38,6 +41,7 @@ module.exports = {
         updatedAt: null,
         deletedAt: null,
         providerId: 1,
+        monitoring: true,
       },
       {
         name: 'Ала-Тоо 24',
@@ -47,6 +51,7 @@ module.exports = {
         updatedAt: null,
         deletedAt: null,
         providerId: 1,
+        monitoring: true,
       },
       {
         name: 'Спорт (КТРК)',
@@ -56,6 +61,7 @@ module.exports = {
         updatedAt: null,
         deletedAt: null,
         providerId: 1,
+        monitoring: true,
       },
       {
         name: 'МИР (Кыргызстан)',
@@ -65,6 +71,7 @@ module.exports = {
         updatedAt: null,
         deletedAt: null,
         providerId: 1,
+        monitoring: true,
       },
       {
         name: 'Пирамида',
@@ -74,6 +81,7 @@ module.exports = {
         updatedAt: null,
         deletedAt: null,
         providerId: 1,
+        monitoring: true,
       },
       {
         name: 'СТВ',
@@ -83,6 +91,7 @@ module.exports = {
         updatedAt: null,
         deletedAt: null,
         providerId: 1,
+        monitoring: true,
       },
       {
         name: '5-Канал',
@@ -92,6 +101,7 @@ module.exports = {
         updatedAt: null,
         deletedAt: null,
         providerId: 1,
+        monitoring: true,
       },
       {
         name: 'Элтр',
@@ -101,6 +111,7 @@ module.exports = {
         updatedAt: null,
         deletedAt: null,
         providerId: 1,
+        monitoring: true,
       },
       {
         name: 'Илим-Билим (ЭлТР)',
@@ -110,6 +121,7 @@ module.exports = {
         updatedAt: null,
         deletedAt: null,
         providerId: 1,
+        monitoring: true,
       },
       {
         name: 'РТР (Кыргызстан)',
@@ -119,6 +131,7 @@ module.exports = {
         updatedAt: null,
         deletedAt: null,
         providerId: 1,
+        monitoring: true,
       },
       {
         name: 'НТС',
@@ -128,6 +141,7 @@ module.exports = {
         updatedAt: null,
         deletedAt: null,
         providerId: 1,
+        monitoring: true,
       },
       {
         name: 'Мир 24',
@@ -137,6 +151,7 @@ module.exports = {
         updatedAt: null,
         deletedAt: null,
         providerId: 1,
+        monitoring: true,
       },
       {
         name: 'Тумар ТВ',
@@ -146,6 +161,7 @@ module.exports = {
         updatedAt: null,
         deletedAt: null,
         providerId: 1,
+        monitoring: true,
       },
       {
         name: 'Киномикс',
@@ -155,6 +171,7 @@ module.exports = {
         updatedAt: null,
         deletedAt: null,
         providerId: 1,
+        monitoring: true,
       },
       {
         name: 'Санат ТВ',
@@ -164,6 +181,7 @@ module.exports = {
         updatedAt: null,
         deletedAt: null,
         providerId: 1,
+        monitoring: true,
       },
       {
         name: 'O!',
@@ -173,6 +191,7 @@ module.exports = {
         updatedAt: null,
         deletedAt: null,
         providerId: 1,
+        monitoring: true,
       },
       {
         name: 'Ош ТВ',
@@ -182,6 +201,7 @@ module.exports = {
         updatedAt: null,
         deletedAt: null,
         providerId: 1,
+        monitoring: true,
       },
       {
         name: 'Наше новое кино',
@@ -191,6 +211,7 @@ module.exports = {
         updatedAt: null,
         deletedAt: null,
         providerId: 1,
+        monitoring: true,
       },
       {
         name: 'TV1KG',
@@ -200,6 +221,7 @@ module.exports = {
         updatedAt: null,
         deletedAt: null,
         providerId: 1,
+        monitoring: true,
       },
       {
         name: 'Родное кино',
@@ -209,6 +231,7 @@ module.exports = {
         updatedAt: null,
         deletedAt: null,
         providerId: 1,
+        monitoring: true,
       },
       {
         name: 'Семейный',
@@ -218,6 +241,7 @@ module.exports = {
         updatedAt: null,
         deletedAt: null,
         providerId: 1,
+        monitoring: true,
       },
       {
         name: 'Ош Пирим',
@@ -227,6 +251,7 @@ module.exports = {
         updatedAt: null,
         deletedAt: null,
         providerId: 1,
+        monitoring: true,
       },
       {
         name: 'Азия ТВ',
@@ -236,6 +261,7 @@ module.exports = {
         updatedAt: null,
         deletedAt: null,
         providerId: 1,
+        monitoring: true,
       },
       {
         name: 'Россия 24',
@@ -245,6 +271,7 @@ module.exports = {
         updatedAt: null,
         deletedAt: null,
         providerId: 1,
+        monitoring: true,
       },
       {
         name: 'Россия Культура',
@@ -254,6 +281,7 @@ module.exports = {
         updatedAt: null,
         deletedAt: null,
         providerId: 1,
+        monitoring: true,
       },
       {
         name: 'Bridge TV Русский Xит',
@@ -263,6 +291,7 @@ module.exports = {
         updatedAt: null,
         deletedAt: null,
         providerId: 1,
+        monitoring: true,
       },
       {
         name: 'TRT Avaz',
@@ -272,6 +301,7 @@ module.exports = {
         updatedAt: null,
         deletedAt: null,
         providerId: 1,
+        monitoring: true,
       },
       {
         name: 'CGTN',
@@ -281,6 +311,7 @@ module.exports = {
         updatedAt: null,
         deletedAt: null,
         providerId: 1,
+        monitoring: true,
       },
       {
         name: 'Карусель',
@@ -290,6 +321,7 @@ module.exports = {
         updatedAt: null,
         deletedAt: null,
         providerId: 1,
+        monitoring: true,
       },
       {
         name: 'ТНВ Планета',
@@ -299,6 +331,7 @@ module.exports = {
         updatedAt: null,
         deletedAt: null,
         providerId: 1,
+        monitoring: true,
       },
       {
         name: 'Спас',
@@ -308,6 +341,7 @@ module.exports = {
         updatedAt: null,
         deletedAt: null,
         providerId: 1,
+        monitoring: true,
       },
       {
         name: 'Телекафе',
@@ -317,6 +351,7 @@ module.exports = {
         updatedAt: null,
         deletedAt: null,
         providerId: 1,
+        monitoring: true,
       },
       {
         name: 'World Fashion TV',
@@ -326,6 +361,7 @@ module.exports = {
         updatedAt: null,
         deletedAt: null,
         providerId: 1,
+        monitoring: true,
       },
       {
         name: 'Бобер',
@@ -335,6 +371,7 @@ module.exports = {
         updatedAt: null,
         deletedAt: null,
         providerId: 1,
+        monitoring: true,
       },
       {
         name: 'Al Jazeera',
@@ -344,6 +381,7 @@ module.exports = {
         updatedAt: null,
         deletedAt: null,
         providerId: 1,
+        monitoring: true,
       },
       {
         name: 'ТВ-3 (Россия)',
@@ -353,6 +391,7 @@ module.exports = {
         updatedAt: null,
         deletedAt: null,
         providerId: 1,
+        monitoring: true,
       },
       {
         name: 'Ностальгия',
@@ -362,6 +401,7 @@ module.exports = {
         updatedAt: null,
         deletedAt: null,
         providerId: 1,
+        monitoring: true,
       },
       {
         name: 'Bridge TV',
@@ -371,6 +411,7 @@ module.exports = {
         updatedAt: null,
         deletedAt: null,
         providerId: 1,
+        monitoring: true,
       },
       {
         name: 'Кино ТВ',
@@ -380,6 +421,7 @@ module.exports = {
         updatedAt: null,
         deletedAt: null,
         providerId: 1,
+        monitoring: true,
       },
       {
         name: 'Bollywood',
@@ -389,6 +431,7 @@ module.exports = {
         updatedAt: null,
         deletedAt: null,
         providerId: 1,
+        monitoring: true,
       },
       {
         name: '8 Канал (Россия)',
@@ -398,6 +441,7 @@ module.exports = {
         updatedAt: null,
         deletedAt: null,
         providerId: 1,
+        monitoring: true,
       },
       {
         name: 'Авто 24',
@@ -407,6 +451,7 @@ module.exports = {
         updatedAt: null,
         deletedAt: null,
         providerId: 1,
+        monitoring: true,
       },
       {
         name: 'Сарафан',
@@ -416,6 +461,7 @@ module.exports = {
         updatedAt: null,
         deletedAt: null,
         providerId: 1,
+        monitoring: true,
       },
       {
         name: 'Deutch Welle',
@@ -425,6 +471,7 @@ module.exports = {
         updatedAt: null,
         deletedAt: null,
         providerId: 1,
+        monitoring: true,
       },
       {
         name: 'Kazakh TV',
@@ -434,6 +481,7 @@ module.exports = {
         updatedAt: null,
         deletedAt: null,
         providerId: 1,
+        monitoring: true,
       },
       {
         name: 'Bridge TV Hits',
@@ -443,6 +491,7 @@ module.exports = {
         updatedAt: null,
         deletedAt: null,
         providerId: 1,
+        monitoring: true,
       },
       {
         name: 'CGTN Русский',
@@ -452,6 +501,7 @@ module.exports = {
         updatedAt: null,
         deletedAt: null,
         providerId: 1,
+        monitoring: true,
       },
       {
         name: 'Ключ',
@@ -461,6 +511,7 @@ module.exports = {
         updatedAt: null,
         deletedAt: null,
         providerId: 1,
+        monitoring: true,
       },
       {
         name: 'Кто есть кто',
@@ -470,6 +521,7 @@ module.exports = {
         updatedAt: null,
         deletedAt: null,
         providerId: 1,
+        monitoring: true,
       },
       {
         name: 'Восток ТВ',
@@ -479,6 +531,7 @@ module.exports = {
         updatedAt: null,
         deletedAt: null,
         providerId: 1,
+        monitoring: true,
       },
       {
         name: 'Союз',
@@ -488,6 +541,7 @@ module.exports = {
         updatedAt: null,
         deletedAt: null,
         providerId: 1,
+        monitoring: true,
       },
       {
         name: 'Кинокомедия',
@@ -497,6 +551,7 @@ module.exports = {
         updatedAt: null,
         deletedAt: null,
         providerId: 1,
+        monitoring: true,
       },
       {
         name: 'Sony Channel',
@@ -506,6 +561,7 @@ module.exports = {
         updatedAt: null,
         deletedAt: null,
         providerId: 1,
+        monitoring: true,
       },
       {
         name: '365 Дней',
@@ -515,6 +571,7 @@ module.exports = {
         updatedAt: null,
         deletedAt: null,
         providerId: 1,
+        monitoring: true,
       },
       {
         name: 'Первый Вегетарианский',
@@ -524,6 +581,7 @@ module.exports = {
         updatedAt: null,
         deletedAt: null,
         providerId: 1,
+        monitoring: true,
       },
       {
         name: 'Zee TV',
@@ -533,6 +591,7 @@ module.exports = {
         updatedAt: null,
         deletedAt: null,
         providerId: 1,
+        monitoring: true,
       },
       {
         name: '360',
@@ -542,6 +601,7 @@ module.exports = {
         updatedAt: null,
         deletedAt: null,
         providerId: 1,
+        monitoring: true,
       },
       {
         name: 'НБТ',
@@ -551,6 +611,7 @@ module.exports = {
         updatedAt: null,
         deletedAt: null,
         providerId: 1,
+        monitoring: true,
       },
       {
         name: 'Белрос',
@@ -560,6 +621,7 @@ module.exports = {
         updatedAt: null,
         deletedAt: null,
         providerId: 1,
+        monitoring: true,
       },
       {
         name: 'Большая Азия',
@@ -569,6 +631,7 @@ module.exports = {
         updatedAt: null,
         deletedAt: null,
         providerId: 1,
+        monitoring: true,
       },
       {
         name: 'Gulli-girl',
@@ -578,6 +641,7 @@ module.exports = {
         updatedAt: null,
         deletedAt: null,
         providerId: 1,
+        monitoring: true,
       },
       {
         name: 'Sony Sci-Fi',
@@ -587,6 +651,7 @@ module.exports = {
         updatedAt: null,
         deletedAt: null,
         providerId: 1,
+        monitoring: true,
       },
       {
         name: 'Точка отрыва',
@@ -596,6 +661,7 @@ module.exports = {
         updatedAt: null,
         deletedAt: null,
         providerId: 1,
+        monitoring: true,
       },
       {
         name: 'Первый канал',
@@ -605,6 +671,7 @@ module.exports = {
         updatedAt: null,
         deletedAt: null,
         providerId: 1,
+        monitoring: true,
       },
       {
         name: 'Дом кино',
@@ -614,6 +681,7 @@ module.exports = {
         updatedAt: null,
         deletedAt: null,
         providerId: 1,
+        monitoring: true,
       },
       {
         name: 'НТВ Стиль',
@@ -623,6 +691,7 @@ module.exports = {
         updatedAt: null,
         deletedAt: null,
         providerId: 1,
+        monitoring: true,
       },
       {
         name: 'НТВ Право',
@@ -632,6 +701,7 @@ module.exports = {
         updatedAt: null,
         deletedAt: null,
         providerId: 1,
+        monitoring: true,
       },
       {
         name: 'НТВ Сериал',
@@ -641,6 +711,7 @@ module.exports = {
         updatedAt: null,
         deletedAt: null,
         providerId: 1,
+        monitoring: true,
       },
       {
         name: 'Nickelodeon',
@@ -650,6 +721,7 @@ module.exports = {
         updatedAt: null,
         deletedAt: null,
         providerId: 1,
+        monitoring: true,
       },
       {
         name: 'Nick Jr.',
@@ -659,6 +731,7 @@ module.exports = {
         updatedAt: null,
         deletedAt: null,
         providerId: 1,
+        monitoring: true,
       },
       {
         name: 'Ювелирочка',
@@ -668,6 +741,7 @@ module.exports = {
         updatedAt: null,
         deletedAt: null,
         providerId: 1,
+        monitoring: true,
       },
       {
         name: 'Телеканал Театр',
@@ -677,6 +751,7 @@ module.exports = {
         updatedAt: null,
         deletedAt: null,
         providerId: 1,
+        monitoring: true,
       },
       {
         name: 'Sky News Arabia HD',
@@ -686,6 +761,7 @@ module.exports = {
         updatedAt: null,
         deletedAt: null,
         providerId: 1,
+        monitoring: true,
       },
       {
         name: 'Океан ТВ',
@@ -695,6 +771,7 @@ module.exports = {
         updatedAt: null,
         deletedAt: null,
         providerId: 1,
+        monitoring: true,
       },
       {
         name: 'Мужской',
@@ -704,6 +781,7 @@ module.exports = {
         updatedAt: null,
         deletedAt: null,
         providerId: 1,
+        monitoring: true,
       },
       {
         name: 'Индийское кино',
@@ -713,6 +791,7 @@ module.exports = {
         updatedAt: null,
         deletedAt: null,
         providerId: 1,
+        monitoring: true,
       },
       {
         name: 'Успех',
@@ -722,6 +801,7 @@ module.exports = {
         updatedAt: null,
         deletedAt: null,
         providerId: 1,
+        monitoring: true,
       },
       {
         name: 'Беларусь 24',
@@ -731,6 +811,7 @@ module.exports = {
         updatedAt: null,
         deletedAt: null,
         providerId: 1,
+        monitoring: true,
       },
       {
         name: 'Че!',
@@ -740,6 +821,7 @@ module.exports = {
         updatedAt: null,
         deletedAt: null,
         providerId: 1,
+        monitoring: true,
       },
       {
         name: 'RU TV',
@@ -749,6 +831,7 @@ module.exports = {
         updatedAt: null,
         deletedAt: null,
         providerId: 1,
+        monitoring: true,
       },
       {
         name: 'Супер',
@@ -758,6 +841,7 @@ module.exports = {
         updatedAt: null,
         deletedAt: null,
         providerId: 1,
+        monitoring: true,
       },
       {
         name: 'Русский бестселлер',
@@ -767,6 +851,7 @@ module.exports = {
         updatedAt: null,
         deletedAt: null,
         providerId: 1,
+        monitoring: true,
       },
       {
         name: 'Дамский клуб',
@@ -776,6 +861,7 @@ module.exports = {
         updatedAt: null,
         deletedAt: null,
         providerId: 1,
+        monitoring: true,
       },
       {
         name: 'Детский',
@@ -785,6 +871,7 @@ module.exports = {
         updatedAt: null,
         deletedAt: null,
         providerId: 1,
+        monitoring: true,
       },
       {
         name: 'Мульт',
@@ -794,6 +881,7 @@ module.exports = {
         updatedAt: null,
         deletedAt: null,
         providerId: 1,
+        monitoring: true,
       },
       {
         name: 'Cartoon Network',
@@ -803,6 +891,7 @@ module.exports = {
         updatedAt: null,
         deletedAt: null,
         providerId: 1,
+        monitoring: true,
       },
       {
         name: 'История',
@@ -812,6 +901,7 @@ module.exports = {
         updatedAt: null,
         deletedAt: null,
         providerId: 1,
+        monitoring: true,
       },
       {
         name: 'VH1-Classic',
@@ -821,6 +911,7 @@ module.exports = {
         updatedAt: null,
         deletedAt: null,
         providerId: 1,
+        monitoring: true,
       },
       {
         name: 'Крик ТВ',
@@ -830,6 +921,7 @@ module.exports = {
         updatedAt: null,
         deletedAt: null,
         providerId: 1,
+        monitoring: true,
       },
       {
         name: 'КВН ТВ',
@@ -839,6 +931,7 @@ module.exports = {
         updatedAt: null,
         deletedAt: null,
         providerId: 1,
+        monitoring: true,
       },
       {
         name: 'Cinema',
@@ -848,6 +941,7 @@ module.exports = {
         updatedAt: null,
         deletedAt: null,
         providerId: 1,
+        monitoring: true,
       },
       {
         name: 'Усадьба ТВ',
@@ -857,6 +951,7 @@ module.exports = {
         updatedAt: null,
         deletedAt: null,
         providerId: 1,
+        monitoring: true,
       },
       {
         name: 'Рен ТВ',
@@ -866,6 +961,7 @@ module.exports = {
         updatedAt: null,
         deletedAt: null,
         providerId: 1,
+        monitoring: true,
       },
       {
         name: 'КХЛ ТВ',
@@ -875,6 +971,7 @@ module.exports = {
         updatedAt: null,
         deletedAt: null,
         providerId: 1,
+        monitoring: true,
       },
       {
         name: 'NickToons',
@@ -884,6 +981,7 @@ module.exports = {
         updatedAt: null,
         deletedAt: null,
         providerId: 1,
+        monitoring: true,
       },
       {
         name: 'Русский роман',
@@ -893,6 +991,7 @@ module.exports = {
         updatedAt: null,
         deletedAt: null,
         providerId: 1,
+        monitoring: true,
       },
       {
         name: 'Москва 24',
@@ -902,6 +1001,7 @@ module.exports = {
         updatedAt: null,
         deletedAt: null,
         providerId: 1,
+        monitoring: true,
       },
       {
         name: 'Евроспорт 1',
@@ -911,6 +1011,7 @@ module.exports = {
         updatedAt: null,
         deletedAt: null,
         providerId: 1,
+        monitoring: true,
       },
       {
         name: 'Евроспорт 2',
@@ -920,6 +1021,7 @@ module.exports = {
         updatedAt: null,
         deletedAt: null,
         providerId: 1,
+        monitoring: true,
       },
       {
         name: 'Tiji (Россия)',
@@ -929,6 +1031,7 @@ module.exports = {
         updatedAt: null,
         deletedAt: null,
         providerId: 1,
+        monitoring: true,
       },
       {
         name: 'Тайна',
@@ -938,6 +1041,7 @@ module.exports = {
         updatedAt: null,
         deletedAt: null,
         providerId: 1,
+        monitoring: true,
       },
       {
         name: 'Жаша!',
@@ -947,6 +1051,7 @@ module.exports = {
         updatedAt: null,
         deletedAt: null,
         providerId: 1,
+        monitoring: true,
       },
       {
         name: 'France 24 French',
@@ -956,6 +1061,7 @@ module.exports = {
         updatedAt: null,
         deletedAt: null,
         providerId: 1,
+        monitoring: true,
       },
       {
         name: 'France 24 English',
@@ -965,6 +1071,7 @@ module.exports = {
         updatedAt: null,
         deletedAt: null,
         providerId: 1,
+        monitoring: true,
       },
       {
         name: 'France 24 Arab',
@@ -974,6 +1081,7 @@ module.exports = {
         updatedAt: null,
         deletedAt: null,
         providerId: 1,
+        monitoring: true,
       },
       {
         name: 'France 24 Spanish',
@@ -983,6 +1091,7 @@ module.exports = {
         updatedAt: null,
         deletedAt: null,
         providerId: 1,
+        monitoring: true,
       },
       {
         name: 'Мир увлечений',
@@ -992,6 +1101,7 @@ module.exports = {
         updatedAt: null,
         deletedAt: null,
         providerId: 1,
+        monitoring: true,
       },
       {
         name: 'Живая планета',
@@ -1001,6 +1111,7 @@ module.exports = {
         updatedAt: null,
         deletedAt: null,
         providerId: 1,
+        monitoring: true,
       },
       {
         name: 'M1-Global TV',
@@ -1010,6 +1121,7 @@ module.exports = {
         updatedAt: null,
         deletedAt: null,
         providerId: 1,
+        monitoring: true,
       },
       {
         name: 'Бокс ТВ',
@@ -1019,6 +1131,7 @@ module.exports = {
         updatedAt: null,
         deletedAt: null,
         providerId: 1,
+        monitoring: true,
       },
       {
         name: 'Малыш',
@@ -1028,6 +1141,7 @@ module.exports = {
         updatedAt: null,
         deletedAt: null,
         providerId: 1,
+        monitoring: true,
       },
       {
         name: 'Совершенно секретно',
@@ -1037,6 +1151,7 @@ module.exports = {
         updatedAt: null,
         deletedAt: null,
         providerId: 1,
+        monitoring: true,
       },
       {
         name: 'Ля-Минор',
@@ -1046,6 +1161,7 @@ module.exports = {
         updatedAt: null,
         deletedAt: null,
         providerId: 1,
+        monitoring: true,
       },
       {
         name: 'Мужской',
@@ -1055,6 +1171,7 @@ module.exports = {
         updatedAt: null,
         deletedAt: null,
         providerId: 1,
+        monitoring: true,
       },
       {
         name: 'Русский иллюзион',
@@ -1064,6 +1181,7 @@ module.exports = {
         updatedAt: null,
         deletedAt: null,
         providerId: 1,
+        monitoring: true,
       },
       {
         name: 'Иллюзион +',
@@ -1073,6 +1191,7 @@ module.exports = {
         updatedAt: null,
         deletedAt: null,
         providerId: 1,
+        monitoring: true,
       },
       {
         name: 'Еврокино',
@@ -1082,6 +1201,7 @@ module.exports = {
         updatedAt: null,
         deletedAt: null,
         providerId: 1,
+        monitoring: true,
       },
       {
         name: 'RT Doc',
@@ -1091,6 +1211,7 @@ module.exports = {
         updatedAt: null,
         deletedAt: null,
         providerId: 1,
+        monitoring: true,
       },
       {
         name: 'Зоопарк',
@@ -1100,6 +1221,7 @@ module.exports = {
         updatedAt: null,
         deletedAt: null,
         providerId: 1,
+        monitoring: true,
       },
       {
         name: 'Europaplus TV',
@@ -1109,6 +1231,7 @@ module.exports = {
         updatedAt: null,
         deletedAt: null,
         providerId: 1,
+        monitoring: true,
       },
       {
         name: 'Кухня ТВ',
@@ -1118,6 +1241,7 @@ module.exports = {
         updatedAt: null,
         deletedAt: null,
         providerId: 1,
+        monitoring: true,
       },
       {
         name: 'Доктор ТВ',
@@ -1127,6 +1251,7 @@ module.exports = {
         updatedAt: null,
         deletedAt: null,
         providerId: 1,
+        monitoring: true,
       },
       {
         name: 'В гостях у сказки... ',
@@ -1136,6 +1261,7 @@ module.exports = {
         updatedAt: null,
         deletedAt: null,
         providerId: 1,
+        monitoring: true,
       },
       {
         name: 'Dorama',
@@ -1145,6 +1271,7 @@ module.exports = {
         updatedAt: null,
         deletedAt: null,
         providerId: 1,
+        monitoring: true,
       },
       {
         name: 'Победа',
@@ -1154,6 +1281,7 @@ module.exports = {
         updatedAt: null,
         deletedAt: null,
         providerId: 1,
+        monitoring: true,
       },
       {
         name: 'Paramount Comedy',
@@ -1163,6 +1291,7 @@ module.exports = {
         updatedAt: null,
         deletedAt: null,
         providerId: 1,
+        monitoring: true,
       },
       {
         name: 'Моя планета',
@@ -1172,6 +1301,7 @@ module.exports = {
         updatedAt: null,
         deletedAt: null,
         providerId: 1,
+        monitoring: true,
       },
       {
         name: 'Paramount Channel',
@@ -1181,6 +1311,7 @@ module.exports = {
         updatedAt: null,
         deletedAt: null,
         providerId: 1,
+        monitoring: true,
       },
       {
         name: 'Sony Turbo',
@@ -1190,6 +1321,7 @@ module.exports = {
         updatedAt: null,
         deletedAt: null,
         providerId: 1,
+        monitoring: true,
       },
       {
         name: 'НСТВ',
@@ -1199,6 +1331,7 @@ module.exports = {
         updatedAt: null,
         deletedAt: null,
         providerId: 1,
+        monitoring: true,
       },
       {
         name: 'Мама',
@@ -1208,6 +1341,7 @@ module.exports = {
         updatedAt: null,
         deletedAt: null,
         providerId: 1,
+        monitoring: true,
       },
       {
         name: 'FilmBox',
@@ -1217,6 +1351,7 @@ module.exports = {
         updatedAt: null,
         deletedAt: null,
         providerId: 1,
+        monitoring: true,
       },
       {
         name: 'Bolajon',
@@ -1226,6 +1361,7 @@ module.exports = {
         updatedAt: null,
         deletedAt: null,
         providerId: 1,
+        monitoring: true,
       },
       {
         name: 'FilmBox Arthouse',
@@ -1235,6 +1371,7 @@ module.exports = {
         updatedAt: null,
         deletedAt: null,
         providerId: 1,
+        monitoring: true,
       },
       {
         name: 'Fast & FunBox',
@@ -1244,6 +1381,7 @@ module.exports = {
         updatedAt: null,
         deletedAt: null,
         providerId: 1,
+        monitoring: true,
       },
       {
         name: 'DocuBox',
@@ -1253,6 +1391,7 @@ module.exports = {
         updatedAt: null,
         deletedAt: null,
         providerId: 1,
+        monitoring: true,
       },
       {
         name: 'RTG',
@@ -1262,6 +1401,7 @@ module.exports = {
         updatedAt: null,
         deletedAt: null,
         providerId: 1,
+        monitoring: true,
       },
       {
         name: 'Киноужас',
@@ -1271,6 +1411,7 @@ module.exports = {
         updatedAt: null,
         deletedAt: null,
         providerId: 1,
+        monitoring: true,
       },
       {
         name: 'Киносерия',
@@ -1280,6 +1421,7 @@ module.exports = {
         updatedAt: null,
         deletedAt: null,
         providerId: 1,
+        monitoring: true,
       },
       {
         name: 'Время',
@@ -1289,6 +1431,7 @@ module.exports = {
         updatedAt: null,
         deletedAt: null,
         providerId: 1,
+        monitoring: true,
       },
       {
         name: 'Загородная жизнь',
@@ -1298,6 +1441,7 @@ module.exports = {
         updatedAt: null,
         deletedAt: null,
         providerId: 1,
+        monitoring: true,
       },
       {
         name: 'Extreme Sport',
@@ -1307,6 +1451,7 @@ module.exports = {
         updatedAt: null,
         deletedAt: null,
         providerId: 1,
+        monitoring: true,
       },
       {
         name: 'НТВ Хит',
@@ -1316,6 +1461,7 @@ module.exports = {
         updatedAt: null,
         deletedAt: null,
         providerId: 1,
+        monitoring: true,
       },
       {
         name: 'Музыка первого',
@@ -1325,6 +1471,7 @@ module.exports = {
         updatedAt: null,
         deletedAt: null,
         providerId: 1,
+        monitoring: true,
       },
       {
         name: 'Q Sport',
@@ -1334,6 +1481,7 @@ module.exports = {
         updatedAt: null,
         deletedAt: null,
         providerId: 1,
+        monitoring: true,
       },
       {
         name: 'Q Sport Арена',
@@ -1343,6 +1491,7 @@ module.exports = {
         updatedAt: null,
         deletedAt: null,
         providerId: 1,
+        monitoring: true,
       },
       {
         name: 'Fightbox',
@@ -1352,6 +1501,7 @@ module.exports = {
         updatedAt: null,
         deletedAt: null,
         providerId: 1,
+        monitoring: true,
       },
       {
         name: 'Авто Плюс',
@@ -1361,6 +1511,7 @@ module.exports = {
         updatedAt: null,
         deletedAt: null,
         providerId: 1,
+        monitoring: true,
       },
     ]);
   },

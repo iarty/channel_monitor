@@ -35,6 +35,9 @@ export class Channel extends Model {
   @Column({ defaultValue: false })
   status: boolean;
 
+  @Column({ defaultValue: false })
+  monitoring: boolean;
+
   @CreatedAt public createdAt: Date;
 
   @UpdatedAt public updatedAt: Date;

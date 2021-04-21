@@ -7,6 +7,7 @@ import {
 } from '@nestjs/platform-fastify';
 import { setupSwagger } from './swagger';
 import * as morgan from 'morgan';
+import { getBotToken } from 'nestjs-telegraf';
 
 const start = async () => {
   try {
@@ -15,6 +16,8 @@ const start = async () => {
       AppModule,
       new FastifyAdapter(),
     );
+    const bot = app.get(getBotToken());
+    app.use(bot.webhookCallback('/start'));
     app.setGlobalPrefix('api');
     app.use(morgan('combine'));
     app.enableCors();

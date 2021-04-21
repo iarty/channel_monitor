@@ -29,8 +29,8 @@ export class ProvidersController {
     return this.providerService.addProvider(dto);
   }
 
-  @Delete()
-  deleteProvider(@Body() id: number) {
+  @Delete('/:id')
+  deleteProvider(@Param('id') id: string) {
     return this.providerService.deleteProvider(id);
   }
 
