@@ -3,7 +3,7 @@ COPY . /app
 
 # Build args
 ARG REACT_APP_API_URL
-g
+
 RUN cd /app && npm install
 # Environment vars
 ENV REACT_APP_API_URL=$REACT_APP_API_URL
