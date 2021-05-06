@@ -6,22 +6,26 @@ module.exports = {
       {
         name: 'Megacom',
         createdAt: new Date(),
-        updatedAt: new Date(),
+        updatedAt: null,
+        deletedAt: null,
       },
       {
         name: 'Beeline',
         createdAt: new Date(),
-        updatedAt: new Date(),
+        updatedAt: null,
+        deletedAt: null,
       },
       {
         name: 'ZorTV',
         createdAt: new Date(),
-        updatedAt: new Date(),
+        updatedAt: null,
+        deletedAt: null,
       },
       {
         name: 'Кара-Балта',
         createdAt: new Date(),
-        updatedAt: new Date(),
+        updatedAt: null,
+        deletedAt: null,
       },
     ]);
   },

@@ -22,11 +22,7 @@ const start = async () => {
     app.use(morgan('combine'));
     app.enableCors();
     setupSwagger(app);
-    await app.listen(PORT, () =>
-      logger('initialize-app').info(
-        `Server has been started on port ${PORT}...`,
-      ),
-    );
+    await app.listen(PORT, "0.0.0.0");
   } catch (error) {
     console.log(error);
     logger('initialize-app').error(error);

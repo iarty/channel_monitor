@@ -1,0 +1,8 @@
+FROM node:12.14.1-alpine
+Cannot find module
+RUN mkdir -p /app
+WORKDIR /app
+COPY ./backend /app
+RUN npm install
+RUN ls -la node_modules
+CMD ["npm", "run", "start:dev"]

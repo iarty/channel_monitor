@@ -6,6 +6,7 @@ volumes:
 
 services:
   postgres:
+    container_name: channel_monitor_db
     build: docker-files/postgresql/
     image: tvclick/postgres
     ports:
@@ -16,28 +17,27 @@ services:
     env_file: development.env
 
   backend:
+    container_name: channel_monitor_backend
+    image: tvclick/backend
     build:
       context: .
       dockerfile: docker-files/backend/Dockerfile
-    image: tvclick/backend
     depends_on:
       - postgres
-    volumes:
-      - ./backend:/app
     ports:
       - "5000:5000"
       - "3333:3333"
     env_file: development.env
+    restart: always
 
   frontend:
-    container_name: frontend
+    container_name: channel_monitor_frontend
     image: tvclick/frontend
-    restart: always
     build:
       context: .
       dockerfile: docker-files/frontend/Dockerfile
       args:
-        - REACT_APP_API_URL=https://localhost:5000/
+        - REACT_APP_API_URL=http://192.168.15.6:5000/api
     ports:
       - '3000:80'
     restart: always

@@ -33,6 +33,8 @@ export class TasksService {
       channels.map((channel) => this.httpService.get(channel.url).toPromise()),
     );
 
+    console.log(resolved.filter((el) => el.status === 'rejected'))
+
     (async function putDb(channelModel) {
       for (const element of resolved) {
         if (element.status === 'fulfilled') {
@@ -73,12 +75,12 @@ export class TasksService {
         }
       }
     })(this.channelModel);
-    console.log(format(new Date(), 'dd.MM.yyyy HH:mm:ss'), 'test');
+    
     const editedChannel = await this.channelModel.findAll({
       include: [Provider],
       order: [['id', 'ASC']],
     });
-
+    
     const failedChannel = editedChannel
       .map((el) => el.toJSON())
       .filter((item: any) => !item.status && item.monitoring);

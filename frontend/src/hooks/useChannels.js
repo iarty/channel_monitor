@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import socketIOClient from "socket.io-client";
 
-const SERVER_URL = "http://localhost:3333";
+const SERVER_URL = "http://192.168.15.6:3333";
 
 export const useChannels = () => {
   const [channels, setChannels] = useState([]);

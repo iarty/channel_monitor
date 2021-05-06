@@ -1,5 +1,5 @@
 FROM node:12.14.1-alpine as build
-COPY . /app
+COPY ./frontend /app
 
 # Build args
 ARG REACT_APP_API_URL
