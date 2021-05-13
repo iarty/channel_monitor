@@ -33,7 +33,6 @@ export class TasksService {
       channels.map((channel) => this.httpService.get(channel.url).toPromise()),
     );
 
-    console.log(resolved.filter((el) => el.status === 'rejected'))
 
     (async function putDb(channelModel) {
       for (const element of resolved) {

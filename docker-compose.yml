@@ -15,6 +15,7 @@ services:
       - postgres_data_dev:/var/lib/postgresql/data
       - ./backups:/backups
     env_file: development.env
+    restart: always
 
   backend:
     container_name: channel_monitor_backend
