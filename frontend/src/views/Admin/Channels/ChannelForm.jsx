@@ -16,9 +16,10 @@ const validationSchema = () =>
 const ChannelsForm = ({ close, id }) => {
   const dispatch = useDispatch();
   const { postChannel, putChannel } = useAction();
-  const { providers, channels } = useSelector((state) => ({
+  const { providers, channels, servers } = useSelector((state) => ({
     providers: state.providers.providers,
     channels: state.channels.channels,
+    servers: state.servers.servers,
   }));
 
   const {
@@ -80,6 +81,22 @@ const ChannelsForm = ({ close, id }) => {
             >
               <option hidden value="" />
               {providers.map((el) => (
+                <option value={el.id} key={el.id}>
+                  {el.name}
+                </option>
+              ))}
+            </FormControl>
+            {errors.providerId && (
+              <Form.Control.Feedback type="invalid">
+                {errors.providerId?.message}
+              </Form.Control.Feedback>
+            )}
+          </Form.Group>
+          <Form.Group controlId="serverId">
+            <Form.Label>Сервер</Form.Label>
+            <FormControl name="serverId" as="select" {...register("serverId")}>
+              <option hidden value="" />
+              {servers.map((el) => (
                 <option value={el.id} key={el.id}>
                   {el.name}
                 </option>
