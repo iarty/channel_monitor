@@ -2,6 +2,7 @@ import MainPage from "./views";
 import AdminPanel from "./views/Admin";
 import ChannelAdmin from "./views/Admin/Channels";
 import ProviderAdmin from "./views/Admin/Providers";
+import ServerAdmin from "./views/Admin/Servers";
 import AllChannels from "./views/Channels";
 import ChannelPage from "./views/Channels/ChannelCard";
 
@@ -26,5 +27,11 @@ export const routes = [
     navigated: true,
     path: "/admin/providers",
     component: ProviderAdmin,
+  },
+  {
+    id: 7,
+    navigated: true,
+    path: "/admin/servers",
+    component: ServerAdmin,
   },
 ];

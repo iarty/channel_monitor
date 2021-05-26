@@ -12,6 +12,10 @@ const Admin = () => {
           <h3>Провайдеры &rarr;</h3>
           <p>Здесь можно администрировать провайдеры</p>
         </Link>
+        <Link to="/admin/servers" className="card-link">
+          <h3>Серверы &rarr;</h3>
+          <p>Здесь можно администрировать серверы</p>
+        </Link>
       </div>
     </div>
   );
