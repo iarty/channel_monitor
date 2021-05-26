@@ -4,12 +4,12 @@ dotenv.config({ path: '.env.development.local' });
 import { Module } from '@nestjs/common';
 import { ChannelsModule } from './channels/channels.module';
 import { ProvidersModule } from './providers/providers.module';
+import { ServersModule } from './servers/servers.module';
 import { SequelizeModule } from '@nestjs/sequelize';
 import { ConfigModule } from '@nestjs/config';
 import { Dialect } from 'sequelize/types';
 import { SchModule } from './channelSchedule/schedule.module';
 import { TelegramModule } from './telegram/telegram.module';
-// import { WSChannelsGateway } from './websocket/wschannels.gateway';
 import { WSChannelsModule } from './websocket/wschannels.module';
 
 @Module({
@@ -31,6 +31,7 @@ import { WSChannelsModule } from './websocket/wschannels.module';
     }),
     ChannelsModule,
     ProvidersModule,
+    ServersModule,
     TelegramModule,
     SchModule,
     WSChannelsModule,

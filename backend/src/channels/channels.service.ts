@@ -3,6 +3,7 @@ import { InjectModel } from '@nestjs/sequelize';
 import { CreateChannelDto, EditChannelDto } from 'db/models/channels.dto';
 import { Channel } from 'db/models/channels.model';
 import { Provider } from 'db/models/provider.model';
+import { Server } from 'db/models/servers.model';
 
 @Injectable()
 export class ChannelsService {
@@ -14,7 +15,7 @@ export class ChannelsService {
   async getChannels(): Promise<Channel[]> {
     try {
       const channels = await this.channelModel.findAll({
-        include: [Provider],
+        include: [Provider, Server],
         order: [['id', 'ASC']],
       });
       return channels;
@@ -29,7 +30,7 @@ export class ChannelsService {
         where: {
           id,
         },
-        include: [Provider],
+        include: [Provider, Server],
       });
       return channel;
     } catch (error) {

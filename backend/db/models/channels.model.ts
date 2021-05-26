@@ -10,6 +10,7 @@ import {
   ForeignKey,
 } from 'sequelize-typescript';
 import { Provider } from './provider.model';
+import { Server } from './servers.model';
 
 @Table
 export class Channel extends Model {
@@ -53,4 +54,11 @@ export class Channel extends Model {
   @ForeignKey(() => Provider)
   @Column
   providerId: number;
+
+  @BelongsTo(() => Server)
+  server: Server;
+
+  @ForeignKey(() => Server)
+  @Column
+  serverId: number;
 }
