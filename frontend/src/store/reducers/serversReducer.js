@@ -1,10 +1,10 @@
 import {
-  FETCH_PROVIDERS_SUCCESS,
-  SET_PROVIDER_ERROR,
-  SET_PROVIDER_LOADING,
-  POST_PROVIDER_SUCCESS,
-  PUT_PROVIDER_SUCCESS,
-  DELETE_PROVIDER_SUCCESS,
+  FETCH_SERVERS_SUCCESS,
+  SET_SERVER_ERROR,
+  SET_SERVER_LOADING,
+  POST_SERVER_SUCCESS,
+  PUT_SERVER_SUCCESS,
+  DELETE_SERVER_SUCCESS,
 } from "../actions-creator/types";
 
 const initialState = {
@@ -16,20 +16,20 @@ const initialState = {
 
 export const serversReducer = (state = initialState, action) => {
   switch (action.type) {
-    case SET_PROVIDER_LOADING:
+    case SET_SERVER_LOADING:
       return { ...state, loading: true };
-    case SET_PROVIDER_ERROR:
+    case SET_SERVER_ERROR:
       return { ...state, loading: false, error: action.payload.error };
-    case POST_PROVIDER_SUCCESS:
+    case POST_SERVER_SUCCESS:
       return { ...state, loading: false };
-    case PUT_PROVIDER_SUCCESS:
+    case PUT_SERVER_SUCCESS:
       return { ...state, loading: false };
-    case DELETE_PROVIDER_SUCCESS:
+    case DELETE_SERVER_SUCCESS:
       return { ...state, loading: false };
-    case FETCH_PROVIDERS_SUCCESS:
+    case FETCH_SERVERS_SUCCESS:
       return {
         ...state,
-        providers: action.payload,
+        servers: action.payload,
         error: null,
         loading: false,
       };

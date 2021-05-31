@@ -2,11 +2,10 @@ import { useState, useEffect } from "react";
 import Table from "rc-table";
 import { ExchangeIcon, TasksIcon, ThListIcon } from "react-line-awesome";
 import { useAction } from "../../../hooks/useActions";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import CrudIcon from "../../../components/CrudIcon";
 import { Button, Modal, Spinner } from "react-bootstrap";
 import ProviderForm from "./ServerForm";
-import { useDispatch } from "react-redux";
 
 const initialState = { open: false, id: null };
 
