@@ -6,6 +6,8 @@ import { format, differenceInMinutes } from 'date-fns';
 import { InjectBot } from 'nestjs-telegraf';
 import { WSService } from 'src/websocket/wschannels.service';
 import { Provider } from 'db/models/provider.model';
+import { Server } from 'db/models/servers.model';
+
 @Injectable()
 export class TasksService {
   private readonly logger = new Logger(TasksService.name);
@@ -26,14 +28,13 @@ export class TasksService {
     const chatId = this.telegramBot.context?.chatId;
     const channels = await this.channelModel.findAll({
       raw: true,
-      include: [Provider],
+      include: [Provider, Server],
     });
 
     const resolved = await Promise.allSettled(
       channels.map((channel) => this.httpService.get(channel.url).toPromise()),
     );
-
-
+    // console.log(resolved[0]);
     (async function putDb(channelModel) {
       for (const element of resolved) {
         if (element.status === 'fulfilled') {
@@ -74,12 +75,12 @@ export class TasksService {
         }
       }
     })(this.channelModel);
-    
+
     const editedChannel = await this.channelModel.findAll({
-      include: [Provider],
+      include: [Provider, Server],
       order: [['id', 'ASC']],
     });
-    
+
     const failedChannel = editedChannel
       .map((el) => el.toJSON())
       .filter((item: any) => !item.status && item.monitoring);
@@ -95,6 +96,7 @@ export class TasksService {
         },
       );
     }
+
     this.ws.socket.emit('channels', editedChannel);
   }
 }
