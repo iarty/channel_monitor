@@ -38,3 +38,5 @@ package-lock.json
 *.local
 db/migrations
 db/seeders
+
+TempVideoFile/*

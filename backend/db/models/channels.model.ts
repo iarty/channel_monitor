@@ -36,6 +36,9 @@ export class Channel extends Model {
   @Column({ defaultValue: false })
   status: boolean;
 
+  @Column({ defaultValue: true })
+  isSoundOn: boolean;
+
   @Column({ defaultValue: false })
   monitoring: boolean;
 
