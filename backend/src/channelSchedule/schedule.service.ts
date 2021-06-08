@@ -7,6 +7,11 @@ import { InjectBot } from 'nestjs-telegraf';
 import { WSService } from 'src/websocket/wschannels.service';
 import { Provider } from 'db/models/provider.model';
 import { Server } from 'db/models/servers.model';
+import { AxiosResponse } from 'axios';
+const ffprobe = require('ffprobe');
+const ffprobeStatic = require('ffprobe-static');
+const fs = require('fs');
+const path = require('path');
 
 @Injectable()
 export class TasksService {
@@ -23,7 +28,8 @@ export class TasksService {
     @InjectBot() private telegramBot,
   ) {}
 
-  @Cron('*/5 * * * *')
+  @Cron('*/2 * * * *')
+  // @Cron('*/5 * * * *')
   async handleCron() {
     const chatId = this.telegramBot.context?.chatId;
     const channels = await this.channelModel.findAll({
@@ -31,50 +37,141 @@ export class TasksService {
       include: [Provider, Server],
     });
 
-    const resolved = await Promise.allSettled(
-      channels.map((channel) => this.httpService.get(channel.url).toPromise()),
-    );
-    // console.log(resolved[0]);
-    (async function putDb(channelModel) {
-      for (const element of resolved) {
-        if (element.status === 'fulfilled') {
-          const channel = channels.find(
-            (channel) => channel.url === element.value.config.url,
+    fs.readdir('src/TempVideoFile', (err: any, files: any) => {
+      if (err) throw err;
+
+      for (const file of files) {
+        fs.unlink(path.join('src/TempVideoFile', file), (err: any) => {
+          if (err) throw err;
+        });
+      }
+    });
+
+    const soundAnalyz = async (
+      data: PromiseFulfilledResult<AxiosResponse<any>>,
+    ) => {
+      const lastVideoFragment = data.value.data.split('\n').reverse()[1];
+      if (
+        lastVideoFragment.split('.').length > 1 &&
+        !data.value.config.url.includes('shum')
+      ) {
+        try {
+          const url = data.value.config.url.split('/');
+          url.splice(5, 1, lastVideoFragment);
+          let videoFileRequest;
+          try {
+            videoFileRequest = await this.httpService
+              .get(url.join('/'), { responseType: 'stream' })
+              .toPromise();
+          } catch (error) {
+            console.log(url.join('/'));
+            // console.log(error);
+          }
+          await videoFileRequest.data.pipe(
+            fs.createWriteStream(`src/TempVideoFile/${lastVideoFragment}.mp4`),
           );
-          await channelModel.update(
+
+          const ffprobeResult = await ffprobe(
+            `src/TempVideoFile/${lastVideoFragment}.mp4`,
             {
-              ...channel,
-              status:
-                differenceInMinutes(
-                  new Date(element.value.headers['last-modified']),
-                  new Date(),
-                ) < -5
-                  ? false
-                  : true,
-              lastDate: format(
-                new Date(element.value.headers['last-modified']),
-                'dd.MM.yyyy HH:mm:ss',
-              ),
-              updatedAt: new Date(),
+              path: ffprobeStatic.path,
             },
-            { where: { id: channel.id } },
           );
-        } else {
-          const channel = channels.find(
-            (channel) => channel.url === element.reason.config.url,
+
+          //Проверка одного канала
+          // if (
+          //   !ffprobeResult?.streams.find(
+          //     (el) => el.codec_name === 'aac' || el.codec_name === 'mp2',
+          //   )
+          // ) {
+          //   console.log(data.value.config.url);
+          //   console.log(ffprobeResult);
+          // }
+
+          return !!ffprobeResult?.streams.find(
+            (el) => el.codec_name === 'aac' || el.codec_name === 'mp2',
           );
-          await channelModel.update(
-            {
-              ...channel,
-              status: false,
-              lastDate: null,
-              updatedAt: new Date(),
-            },
-            { where: { id: channel.id } },
-          );
+        } catch (error) {
+          // console.log(data.value.config.url);
         }
       }
-    })(this.channelModel);
+    };
+
+    function putDb(channelModel, resolved) {
+      return new Promise(async (resolve, reject) => {
+        try {
+          for (const element of resolved) {
+            if (element.status === 'fulfilled') {
+              const channel = await channelModel.findOne({
+                raw: true,
+                where: { url: element.value.config.url },
+              });
+              const isSoundOn = await soundAnalyz(element);
+              await channelModel.update(
+                {
+                  ...channel,
+                  isSoundOn,
+                  status:
+                    differenceInMinutes(
+                      new Date(element.value.headers['last-modified']),
+                      new Date(),
+                    ) < -5
+                      ? false
+                      : true,
+                  lastDate: format(
+                    new Date(element.value.headers['last-modified']),
+                    'dd.MM.yyyy HH:mm:ss',
+                  ),
+                  updatedAt: new Date(),
+                },
+                { where: { id: channel.id } },
+              );
+            } else {
+              const channel = await channelModel.findOne({
+                raw: true,
+                where: { url: element.reason.config.url },
+              });
+
+              await channelModel.update(
+                {
+                  ...channel,
+                  status: false,
+                  lastDate: null,
+                  updatedAt: new Date(),
+                },
+                { where: { id: channel.id } },
+              );
+            }
+          }
+          resolve(true);
+        } catch (error) {
+          reject(error);
+        }
+      });
+    }
+
+    while (channels.length > 0) {
+      const chArr = channels.splice(0, 20);
+      const resolved = await Promise.allSettled(
+        chArr.map((channel) => this.httpService.get(channel.url).toPromise()),
+      );
+
+      await putDb(this.channelModel, resolved);
+    }
+
+    ////////////////////////////////////////////////////////////////////
+    // const resolved = await Promise.allSettled(
+    //   channels.map((channel) => this.httpService.get(channel.url).toPromise()),
+    // );
+
+    // // Проверить конкретный канал
+    // const temp: any = resolved.filter((el) => el.status === 'fulfilled');
+    // console.log(
+    //   await soundAnalyz(
+    //     temp.find((el: any) => el.value.config.url.includes('pobeda')),
+    //   ),
+    // );
+    ////////////////////////////////////////////////////////////////////////
 
     const editedChannel = await this.channelModel.findAll({
       include: [Provider, Server],
@@ -85,11 +182,20 @@ export class TasksService {
       .map((el) => el.toJSON())
       .filter((item: any) => !item.status && item.monitoring);
 
-    if (failedChannel.length && chatId) {
+    const channelWithoutSound = editedChannel
+      .map((el) => el.toJSON())
+      .filter((item: any) => !item.isSoundOn && item.status && item.monitoring);
+
+    if ((failedChannel.length || channelWithoutSound.length) && chatId) {
       this.telegramBot.telegram.sendMessage(
         chatId,
-        `<strong>Не работают каналы:</strong>
-        ${failedChannel.map((el: any) => `❌ ${el.name}`).join('\n')}
+        `${
+          failedChannel.length ? '<strong>Не работают каналы:</strong>\n' : ''
+        }${failedChannel.map((el: any) => `❌ ${el.name}`).join('\n')}\n\n${
+          channelWithoutSound.length
+            ? '<strong>Отсутвует звук на каналах:</strong>'
+            : ''
+        }\n${channelWithoutSound.map((el: any) => `🔕 ${el.name}`).join('\n')}
         `,
         {
           parse_mode: 'Html',
